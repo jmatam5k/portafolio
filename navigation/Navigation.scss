@@ -1,0 +1,289 @@
+/**
+ * React Static Boilerplate
+ * https://github.com/koistya/react-static-boilerplate
+ * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+ */
+
+@import '../variables.scss';
+
+.Navigation {
+  display: flex;
+  flex-direction: row;
+  margin-top: 35px;
+  list-style: none;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.Navigation-item {
+  padding: 0 1em;
+}
+.more {padding-top: 20px !important}
+.headeroff {transition: all 0.2s}
+.subheader {display:none}
+.subheader .container {
+  padding: 20px 20px;
+  display: table-cell;
+}
+.subheader {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 320px;
+  z-index: 9999;
+}
+.subheader li {display: inline-block; padding: 10px; color : #000}
+.subheader li a {
+  color: #000;
+
+  &:hover {
+    color:#474044;
+    text-decoration: none;
+  }
+  &:focus{
+    color: #474044;
+    text-decoration: none;
+  }
+}
+.subheader.open {
+  display: block
+}
+.Navigation-link {
+  padding: 0;
+  color: $brand-color;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover {
+    border-top: 3px solid #00a6ab;
+    color: $text-color;
+    padding-top:5px;
+    text-decoration: none;
+  }
+  &:focus {
+    color: #474044;
+    border-top: 3px solid #00a6ab;
+    padding-top:5px;
+    text-decoration: none;
+  }
+}
+.Navigation-link.txt_calipso{
+  color: #00a6ab !important;
+}
+.img_header{
+  padding: 0 1%;
+}
+.cont_header{
+  height: 37vw;
+  position: relative;
+  width: 100%;
+}
+.cont_btn_header{
+  bottom: 22.5%;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+}
+.cont_btn_header_in{
+  bottom: 40%;
+  text-align: right;
+  position: absolute;
+  width: 90%;
+}
+.btn_header{
+  background-color: #f99a03;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.txt_absolute{
+  bottom: 2%;
+  font-size: 1.6rem;
+  position: absolute;
+  text-align: center;
+}
+.logo_header{
+  margin: 10px 0;
+  width: 10vw;
+}
+.c_mas{
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.txt_mjs{
+  color: #BD7B13;
+
+  &:hover {
+    color: #f99a03;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.txt_grisos{
+  color: #333;
+}
+
+
+/* Clases Móviles */
+  @media screen and (max-width: 768px){
+    .cel_nopad{
+        padding: 0 !important;
+    }
+    .cel_nomargin{
+        margin: 0 auto !important;
+    }
+    .btn_header{
+      font-size: 1.3rem;
+      padding: 1% 3%;
+    }
+    .img_header{
+      height: 65px;
+    }
+    .txt_absolute {
+      bottom: -5px;
+      font-size: 1.5rem;
+    }
+    .navbar-brand>img {
+      display: block;
+      max-width: 30vw;
+      margin-left: -10px;
+    }
+    .navbar-toggle {
+      display: block;
+      position: absolute;
+      margin-right: 3%;
+      margin-top: 2%;
+      right: 0;
+      top:0px;
+      background-color: transparent;
+      background-image: none;
+      border: none;
+      padding: 0px;
+      border-radius: 5px;
+      z-index: 9999;
+    }
+    .navbar-toggle .icon-bar{
+      background-color: #00a6ab;
+      height: 3px
+    }
+
+    .Navigation-item {
+      width: 100%;
+      margin-top: 5px;
+      height:40px;
+      text-align: right;
+    }
+    .Navigation  {
+      display: block;
+      margin:0px;
+      margin-top:65px;
+      height:0px;
+      transition: height 0.5s;
+      overflow: hidden;
+      position: fixed;
+      top:0px;
+      left:0px;
+      width:100%;
+      z-index: 999
+    }
+    .shownNav {
+      background-color: #fff;
+      visibility: visible;
+      height: 400px;
+      padding-left: 0;
+    }
+    .logo_header{
+      margin: 0 auto;
+      width: 25vw;
+    }
+    .cel_top{
+      margin-top: 35px;
+      margin-bottom: 10px;
+    }
+
+    /* LINKS DEL MENÚ MÓVIL */
+    .mobile-link{
+      color: #474044;
+      text-decoration: none;
+      display: block;
+      outline: none;
+      padding: 6%;
+      font-size: 120%
+    }
+    .mobile-link:visited {
+      text-decoration: none;
+    }
+
+    .mobile-link:active, .mobile-link:focus {
+      background: #00a6ab;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-sublink{
+      color: #474044;
+      text-decoration: none;
+      display: block;
+      outline: none;
+      font-size: 1.4rem;
+      padding: 3%;
+    }
+    .mobile-sublink:visited {
+      text-decoration: none;
+    }
+    .mobile-sublink:active, .mobile-sublink:focus {
+      background: #00a6ab;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-sublink:hover{
+      text-decoration: none !important;
+    }
+    .productList {
+      list-style-type: none;
+      margin-left: -10%;
+    }
+    .product {
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+    .bm-menu{
+      font-size: 1.4rem !important;
+    }
+    .bm-cross{
+      background-color: #00a6ab !important;
+      height: 20px !important;
+    }
+    .bm-item-list{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    /* FIN DE LINKS DEL MENÚ MÓVIL */
+
+  }
+
+
+
+
+
